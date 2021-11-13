@@ -1,12 +1,11 @@
 package service;
 
-import imageService.ImageService;
 import application.StatusListener;
 import data.*;
+import imageService.ImageService;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
-import service.SecurityService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

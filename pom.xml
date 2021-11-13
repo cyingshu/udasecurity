@@ -15,8 +15,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>16</maven.compiler.source>
+        <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -69,6 +69,11 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <argLine>
+                            --add-opens security/service=ALL-UNNAMED
+                        </argLine>
+                    </configuration>
                     <version>3.0.0-M5</version>
                 </plugin>
                 <plugin>
@@ -94,4 +99,13 @@
             </plugins>
         </pluginManagement>
     </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.2.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>

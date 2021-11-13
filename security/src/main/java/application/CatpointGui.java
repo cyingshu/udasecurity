@@ -32,13 +32,9 @@ public class CatpointGui extends JFrame {
 
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new MigLayout());
-        DisplayPanel displayPanel = new DisplayPanel(securityService);
         mainPanel.add(displayPanel, "wrap");
-        application.ImagePanel imagePanel = new application.ImagePanel(securityService);
         mainPanel.add(imagePanel, "wrap");
-        ControlPanel controlPanel = new ControlPanel(securityService);
         mainPanel.add(controlPanel, "wrap");
-        SensorPanel sensorPanel = new SensorPanel(securityService);
         mainPanel.add(sensorPanel);
 
         getContentPane().add(mainPanel);
